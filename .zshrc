@@ -96,3 +96,5 @@ alias ts="tig status"
 typeset -U path cdpath fpath manpath
 # activatorのパス
 export PATH=~/shinomilab_sdn/util/activator-dist-1.3.10/bin:$PATH
+# gopath
+export GOPATH=$HOME/.go
