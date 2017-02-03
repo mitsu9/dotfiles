@@ -103,4 +103,4 @@ export GOPATH=$HOME/.go
 ## local setting ##
 ###################
 # githubにあげたくない設定を読み込む
-source .zshrc_local
+source ~/.zshrc_local
