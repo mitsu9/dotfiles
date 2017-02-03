@@ -98,3 +98,9 @@ typeset -U path cdpath fpath manpath
 export PATH=~/shinomilab_sdn/util/activator-dist-1.3.10/bin:$PATH
 # gopath
 export GOPATH=$HOME/.go
+
+###################
+## local setting ##
+###################
+# githubにあげたくない設定を読み込む
+source .zshrc_local
