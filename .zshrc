@@ -96,6 +96,11 @@ alias ts="tig status"
 typeset -U path cdpath fpath manpath
 # activatorのパス
 export PATH=~/shinomilab_sdn/util/activator-dist-1.3.10/bin:$PATH
+# for brew
+export PATH=/usr/local/sbin:$PATH
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 # gopath
 export GOPATH=$HOME/.go
 
