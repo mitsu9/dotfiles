@@ -104,6 +104,10 @@ eval "$(rbenv init -)"
 # gopath
 export GOPATH=$HOME/.go
 
+# for wantaedly intern
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+eval "$(nodenv init -)"
+
 ###################
 ## local setting ##
 ###################
