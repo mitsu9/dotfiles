@@ -88,6 +88,7 @@ function title {
 alias ..="../.."
 alias ...="../../.."
 alias ts="tig status"
+alias c="clear"
 
 #############
 ## パス設定 ##
