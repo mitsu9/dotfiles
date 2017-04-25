@@ -109,6 +109,8 @@ export PATH=$HOME/.nodenv/bin:$PATH
 eval "$(nodenv init -)"
 # for wantaedly intern
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+# nodebrew 
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 ###################
 ## local setting ##
