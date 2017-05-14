@@ -85,10 +85,13 @@ function title {
 ###########
 ## alias ##
 ###########
-alias ..="../.."
-alias ...="../../.."
+alias .="pwd"
+alias ..=".."
+alias ...="../.."
 alias ts="tig status"
 alias c="clear"
+alias gc="git commit -m"
+alias gps="git push"
 
 #############
 ## パス設定 ##
