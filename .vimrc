@@ -97,6 +97,18 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
+"" setting got ctrlp
+" キャッシュディレクトリ
+let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
+" キャッシュをクリアしない
+let g:ctrlp_clear_cache_on_exit = 0
+" 遅延再描画
+let g:ctrlp_lazy_update = 1
+" CtrlPのウィンドウ最大高さ
+let g:ctrlp_max_height = 20
+" ルートパスと認識させるためのファイル
+let g:ctrlp_root_markers = ['Gemfile', 'pom.xml', 'build.xml']
+
 " move window
 nnoremap sl <C-w>l
 nnoremap sh <C-w>h
