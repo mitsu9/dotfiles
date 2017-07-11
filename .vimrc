@@ -81,8 +81,22 @@ set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#add('wincent/command-t', {'build': {'unix': 'cd ruby/command-t/ext/command-t && { make clean; ruby extconf.rb && make }'}})
+  call dein#add('haya14busa/incsearch.vim')
   call dein#end()
 endif
 
 filetype plugin indent on
 syntax enable
+
+if dein#check_install()
+  call dein#install()
+endif
+
+" Key map for haya14busa/incsearch.vim
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" move window
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
