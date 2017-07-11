@@ -20,8 +20,18 @@ set expandtab
 "" ステータス行
 " ステータス行を常に表示
 set laststatus=2
+" ファイル名表示
+set statusline=%F
+" 変更チェック表示
+set statusline+=%m
+" これ以降は右寄せ表示
+set statusline+=%=
 " ステータスラインにbranchを表示
 set statusline+=%{fugitive#statusline()}
+" 空白2つ挿入
+set statusline+=\ \ 
+" カーソル行の表示
+set statusline+=%1l/%L
 
 "" バックアップ
 " backupファイルを作成しない
