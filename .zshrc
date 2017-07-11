@@ -111,6 +111,9 @@ eval "$(nodenv init -)"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 # nodebrew 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+# rbenv
+export PATH=${HOME}/.rbenv/bin:${PATH}
+eval "$(rbenv init -)"
 
 ###################
 ## local setting ##
