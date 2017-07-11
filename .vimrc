@@ -59,3 +59,20 @@ augroup source-vimrc
   autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
   autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
 augroup END
+
+" use dein.vim
+if &compatible
+  set nocompatible
+endif
+let s:dein_dir = expand('~/.vim/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+  call dein#add('wincent/command-t', {'build': {'unix': 'cd ruby/command-t/ext/command-t && { make clean; ruby extconf.rb && make }'}})
+  call dein#end()
+endif
+
+filetype plugin indent on
+syntax enable
