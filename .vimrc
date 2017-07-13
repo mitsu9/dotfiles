@@ -82,6 +82,7 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#add('haya14busa/incsearch.vim')
   call dein#add('kien/ctrlp.vim')
+  call dein#add('elixir-lang/vim-elixir')
   call dein#end()
 endif
 
