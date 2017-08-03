@@ -92,6 +92,7 @@ alias ts="tig status"
 alias c="clear"
 alias gc="git commit -m"
 alias gps="git push"
+alias ssh=~/bin/ssh-background
 
 #############
 ## パス設定 ##
