@@ -1,0 +1,6 @@
+[user]
+  name = mitsu9
+  email = mitsunobu.h.9@gmail.com
+[core]
+  editor = vim
+  excludefile = ~/.gitignore # globalな.gitignore
