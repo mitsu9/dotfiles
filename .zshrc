@@ -56,9 +56,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # 履歴を保存するファイル
 HISTFILE=~/.zsh_history
 # メモリに保存する履歴の件数
-HISTSIZE=10000
+HISTSIZE=1000000
 # ファイルに保存する履歴の件数
-SAVEHIST=10000
+SAVEHIST=1000000
 # 直前と重複するコマンドを無視
 setopt hist_ignore_dups
 # 履歴と重複するコマンドを保存しない
@@ -93,6 +93,8 @@ alias c="clear"
 alias gc="git commit -m"
 alias gps="git push"
 alias ssh=~/bin/ssh-background
+alias be="bundle exec"
+alias h="history -30"
 
 #############
 ## パス設定 ##
