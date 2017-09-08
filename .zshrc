@@ -97,6 +97,18 @@ alias be="bundle exec"
 alias h="history -30"
 
 #############
+## history ##
+#############
+function peco-history-selection() {
+  BUFFER="$(history -nr 1 | awk '!a[$0]++' | peco --query "$LBUFFER" | sed 's/\\n/\n/')"
+  CURSOR=$#BUFFER
+  zle reset-prompt
+}
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
+
+#############
 ## パス設定 ##
 ############
 # 重複する要素を自動的に削除
