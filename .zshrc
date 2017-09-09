@@ -130,6 +130,11 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=${HOME}/.rbenv/bin:${PATH}
 eval "$(rbenv init -)"
 
+###########
+## ctags ##
+###########
+alias ctags="`brew --prefix`/bin/ctags"
+
 ###################
 ## local setting ##
 ###################
