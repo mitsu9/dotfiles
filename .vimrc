@@ -83,6 +83,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('haya14busa/incsearch.vim')
   call dein#add('kien/ctrlp.vim')
   call dein#add('elixir-lang/vim-elixir')
+  call dein#add('soramugi/auto-ctags.vim')
   call dein#end()
 endif
 
@@ -109,6 +110,16 @@ let g:ctrlp_lazy_update = 1
 let g:ctrlp_max_height = 20
 " ルートパスと認識させるためのファイル
 let g:ctrlp_root_markers = ['Gemfile', 'pom.xml', 'build.xml']
+
+"" setting for auto-ctags
+" 保存時に自動でtagを更新
+let g:auto_ctags = 1
+" git管理されていれば/.git/tagsにtagsファイルを作成
+let g:auto_ctags_directory_list = ['.git']
+" ctags実行時のオプション
+let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
+" /.git/tagsを読み込ませる
+:set tags+=.git/tags
 
 " move window
 nnoremap sl <C-w>l
