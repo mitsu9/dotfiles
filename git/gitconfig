@@ -6,3 +6,5 @@
   excludefile = ~/.gitignore # globalな.gitignore
 [alias]
   co = checkout
+[init]
+  templatedir = ~/.git_template
