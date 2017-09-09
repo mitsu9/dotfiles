@@ -120,6 +120,8 @@ let g:auto_ctags_directory_list = ['.git']
 let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
 " /.git/tagsを読み込ませる
 :set tags+=.git/tags
+" 複数候補あるときは一覧を表示
+nnoremap <C-]> g<C-]>
 
 " move window
 nnoremap sl <C-w>l
