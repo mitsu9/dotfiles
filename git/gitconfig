@@ -5,6 +5,9 @@
   editor = vim
   excludefile = ~/.gitignore # globalな.gitignore
 [alias]
+  c  = commit
+  cm = commit --amend
   co = checkout
+  aa = add --all
 [init]
   templatedir = ~/.git_template
