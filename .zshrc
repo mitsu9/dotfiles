@@ -95,6 +95,7 @@ alias gps="git push"
 alias ssh=~/bin/ssh-background
 alias be="bundle exec"
 alias h="history -30"
+alias g="git"
 
 #############
 ## history ##
