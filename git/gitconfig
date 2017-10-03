@@ -11,3 +11,5 @@
   aa = add --all
 [init]
   templatedir = ~/.git_template
+[push]
+  default = current
