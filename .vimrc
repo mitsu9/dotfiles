@@ -43,10 +43,12 @@ set noswapfile
 " パスの設定
 if has('vim_starting')
   set nocompatible
-  set runtimepath+=/Users/mitsunobu/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 " プラグインのインストール
-call neobundle#begin(expand('/Users/mitsunobu/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'tpope/vim-fugitive' " git
 call neobundle#end()
 " Required
@@ -54,13 +56,10 @@ filetype plugin indent on
 NeoBundleCheck
 
 "" カラースキーマ
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'chriskempson/vim-tomorrow-theme'
 syntax on
 set background=dark
 if !has("gui_running")
   colorscheme Tomorrow-Night
-else
 endif
 
 " auto reload .vimrc
