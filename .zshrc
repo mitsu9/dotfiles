@@ -96,6 +96,7 @@ alias ssh=~/bin/ssh-background
 alias be="bundle exec"
 alias h="history -30"
 alias g="git"
+alias gh='cd $(ghq list -p | peco)'
 
 #############
 ## history ##
@@ -118,8 +119,10 @@ typeset -U path cdpath fpath manpath
 export PATH=~/shinomilab_sdn/util/activator-dist-1.3.10/bin:$PATH
 # for brew
 export PATH=/usr/local/sbin:$PATH
-# gopath
+# go
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
 # nodenev
 export PATH=$HOME/.nodenv/bin:$PATH
 eval "$(nodenv init -)"
