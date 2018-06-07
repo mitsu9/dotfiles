@@ -9,6 +9,10 @@
   cm = commit --amend
   co = checkout
   aa = add --all
+  b = branch
+  f = fetch
+  pl = pull
+  m = merge
   showpr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
 [init]
   templatedir = ~/.git_template
