@@ -92,7 +92,7 @@ alias ts="tig status"
 alias c="clear"
 alias gc="git commit -m"
 alias gps="git push"
-alias gf="git fetch"
+alias gf="git fetch -p"
 alias gpl="git pull"
 alias gco="git checkout"
 alias be="bundle exec"
@@ -128,7 +128,7 @@ export PATH=$PATH:$GOPATH/bin
 # nodenev
 export PATH=$HOME/.nodenv/bin:$PATH
 eval "$(nodenv init -)"
-# nodebrew 
+# nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 # rbenv
 export PATH=${HOME}/.rbenv/bin:${PATH}

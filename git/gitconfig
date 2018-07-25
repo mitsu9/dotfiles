@@ -10,7 +10,7 @@
   co = checkout
   aa = add --all
   b = branch
-  f = fetch
+  f = fetch -p
   pl = pull
   m = merge
   nb = !git pull && git checkout -b
