@@ -101,6 +101,7 @@ alias g="git"
 alias gh='cd $(ghq list -p | peco)'
 alias d='docker'
 alias dc='docker-compose'
+alias tf='terraform'
 
 #############
 ## history ##
