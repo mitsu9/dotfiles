@@ -120,3 +120,7 @@ nnoremap <C-]> g<C-]>
 " move window
 nnoremap sl <C-w>l
 nnoremap sh <C-w>h
+
+" ノーマルモード時だけ ; と : を入れ替える
+nnoremap ; :
+nnoremap : ;
