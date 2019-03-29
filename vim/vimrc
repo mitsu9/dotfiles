@@ -3,6 +3,7 @@
 set encoding=utf-8
 " インデント
 set autoindent
+set smartindent
 " 行番号の表示
 set number
 " 編集中の行をハイライト
@@ -16,6 +17,9 @@ set incsearch
 set hidden
 " タブを空白文字に置き換える
 set expandtab
+" タブサイズ
+set tabstop=2
+set shiftwidth=2 
 
 "" ステータス行
 " ステータス行を常に表示
@@ -124,3 +128,9 @@ nnoremap sh <C-w>h
 " ノーマルモード時だけ ; と : を入れ替える
 nnoremap ; :
 nnoremap : ;
+" filetype毎のインデントの設定
+if has("autocmd")
+  filetype plugin on
+  filetype indent on
+  autocmd FileType ruby setlocal sw=2 sts=2 ts=2 et
+end
