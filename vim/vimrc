@@ -87,6 +87,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('elixir-lang/vim-elixir')
   call dein#add('soramugi/auto-ctags.vim')
   call dein#add('itchyny/lightline.vim')
+  call dein#add('scrooloose/nerdtree')
   call dein#end()
 endif
 
