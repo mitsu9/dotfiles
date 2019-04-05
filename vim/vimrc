@@ -112,13 +112,13 @@ let g:ctrlp_root_markers = ['Gemfile', 'pom.xml', 'build.xml']
 
 "" setting for auto-ctags
 " 保存時に自動でtagを更新
-let g:auto_ctags = 1
+"let g:auto_ctags = 1
 " git管理されていれば/.git/tagsにtagsファイルを作成
-let g:auto_ctags_directory_list = ['.git']
+"let g:auto_ctags_directory_list = ['.git']
 " ctags実行時のオプション
-let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
+"let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
 " /.git/tagsを読み込ませる
-:set tags+=.git/tags
+":set tags+=.git/tags
 " 複数候補あるときは一覧を表示
 nnoremap <C-]> g<C-]>
 
@@ -131,6 +131,7 @@ nnoremap sH <C-w>H
 " ノーマルモード時だけ ; と : を入れ替える
 nnoremap ; :
 nnoremap : ;
+
 " filetype毎のインデントの設定
 if has("autocmd")
   filetype plugin on
