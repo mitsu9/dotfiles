@@ -139,3 +139,6 @@ if has("autocmd")
   filetype indent on
   autocmd FileType ruby setlocal sw=2 sts=2 ts=2 et
 end
+
+" NOTE: どこかで上書きされるので最後に記述
+set shortmess-=S
