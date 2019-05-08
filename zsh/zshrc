@@ -124,6 +124,8 @@ bindkey '^R' peco-history-selection
 typeset -U path cdpath fpath manpath
 # for brew
 export PATH=/usr/local/sbin:$PATH
+# for vim(/usr/binより/usr/local/binを優先的に見に行くようにする)
+export PATH=/usr/local/bin:$PATH
 # go
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/.go
