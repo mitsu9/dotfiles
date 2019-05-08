@@ -155,8 +155,8 @@ alias ctags="`brew --prefix`/bin/ctags"
 #autoload -Uz compinit && compinit
 export PATH=$HOME/.asdf/bin:$PATH
 export PATH=$PATH:$HOME/.asdf/shim
-$HOME/.asdf/asdf.sh
-$HOME/.asdf/completions/asdf.bash
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
 
 ###################
 ## local setting ##
