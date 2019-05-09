@@ -129,6 +129,10 @@ nnoremap sh <C-w>h
 nnoremap sL <C-w>L
 nnoremap sH <C-w>H
 
+" move cursor
+nnoremap H ^
+nnoremap L $
+
 " ノーマルモード時だけ ; と : を入れ替える
 nnoremap ; :
 nnoremap : ;
