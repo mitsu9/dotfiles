@@ -20,6 +20,8 @@ set expandtab
 " タブサイズ
 set tabstop=2
 set shiftwidth=2 
+" others
+set backspace=indent,eol,start
 
 "" ステータス行
 " ステータス行を常に表示
