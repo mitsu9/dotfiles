@@ -145,6 +145,8 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # awscli
 export PATH=~/.local/bin:$PATH
+# rust
+export PATH=$HOME/.cargo/env:$PATH
 
 ###########
 ## ctags ##
