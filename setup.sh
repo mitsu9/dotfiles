@@ -7,3 +7,4 @@ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/git/git_template ~/.git_template
 ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/peco/ ~/.peco
+ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
