@@ -48,6 +48,7 @@ set noswapfile
 "" Plugin
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'cocopon/iceberg.vim'
