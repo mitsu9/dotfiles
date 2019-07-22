@@ -115,3 +115,15 @@ end
 
 " NOTE: どこかで上書きされるので最後に記述
 set shortmess-=S
+
+" 行末の空白や最終行の空行を削除
+autocmd BufWritePre * call s:remove_unnecessary_space()
+function! s:remove_unnecessary_space()
+    " delete last spaces
+    %s/\s\+$//ge
+
+    " delete last blank lines
+    while getline('$') == ""
+            $delete _
+    endwhile
+endfunction
