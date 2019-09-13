@@ -5,7 +5,7 @@ set encoding=utf-8
 set autoindent
 set smartindent
 " 行番号の表示
-set number
+set nonumber
 " 編集中の行をハイライト
 set cursorline
 " 対応する括弧をハイライト
