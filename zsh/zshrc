@@ -19,7 +19,8 @@ autoload -U colors; colors
 # PROMPT変数内で変数参照する
 setopt prompt_subst
 # プロンプト表示
-PROMPT='%F{yellow}%* %F{green}%n@%m %F{reset_color}at %F{cyan}$(pwd | sed -e "s,^$HOME,~," | perl -pe "s/~\/(.ghq|.go\/src)\/.+?\//ghq:/")%F{reset_color}'
+local number_of_jobs="%(1j.%F{208} / %f%F{226}%B%j%b%f.)"
+PROMPT='%F{yellow}%* %F{green}%n@%m %F{reset_color}at %F{cyan}$(pwd | sed -e "s,^$HOME,~," | perl -pe "s/~\/(.ghq|.go\/src)\/.+?\//ghq:/")%F{reset_color}${number_of_jobs}'
 PROMPT=$PROMPT' ${vcs_info_msg_0_} %F{cyan}%F{reset_color}
 >>> '
 SPROMPT='%F{red}??? もしかして %r のこと? [No/Yes/Abort/Edit]: %F{reset_color}'
