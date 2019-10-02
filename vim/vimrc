@@ -57,6 +57,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'hashivim/vim-terraform'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 colorscheme iceberg
@@ -105,6 +106,13 @@ nnoremap L $
 " ノーマルモード時だけ ; と : を入れ替える
 nnoremap ; :
 nnoremap : ;
+
+" ctrlp
+if executable('ag')
+  let g:ctrlp_use_caching = 0
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+nnoremap ,, :<c-u>CtrlPMRUFiles<cr>
 
 " filetype毎のインデントの設定
 if has("autocmd")
