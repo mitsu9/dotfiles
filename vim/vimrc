@@ -58,6 +58,8 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tyru/open-browser.vim'
+Plug 'tyru/open-browser-github.vim'
 call plug#end()
 
 colorscheme iceberg
