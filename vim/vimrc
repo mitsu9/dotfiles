@@ -93,6 +93,17 @@ if executable('solargraph')
         \ })
 endif
 
+" lsp go
+if executable('gopls')
+    " go get golang.org/x/tools/cmd/gopls
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+        \ 'whitelist': ['go'],
+        \ })
+    autocmd BufWritePre *.go LspDocumentFormatSync
+endif
+
 
 filetype plugin indent on
 syntax enable
