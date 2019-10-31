@@ -61,6 +61,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'tyru/open-browser-github.vim'
 Plug 'andymass/vim-matchup'
+Plug 'tpope/vim-endwise'
 call plug#end()
 
 colorscheme iceberg
