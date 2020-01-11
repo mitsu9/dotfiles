@@ -120,6 +120,11 @@ function peco-history-selection() {
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
+###################
+## hub extension ##
+###################
+alias search-issues='hub browse -- issues/$(hub issue | peco | tr -s '\'' '\'' '\'' '\'' | cut -d'\'' '\'' -f 2 | cut -c 2-)'
+
 #############
 ## パス設定 ##
 ############
