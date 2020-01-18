@@ -87,7 +87,6 @@ function title {
 ###########
 ## alias ##
 ###########
-alias .="pwd"
 alias ..=".."
 alias ...="../.."
 alias ts="tig status"
