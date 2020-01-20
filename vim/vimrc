@@ -45,6 +45,8 @@ set nobackup
 " swapファイルを作成しない
 set noswapfile
 
+set completeopt=menuone,noinsert,noselect
+
 "" Plugin
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
