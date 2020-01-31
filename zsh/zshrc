@@ -123,6 +123,10 @@ bindkey '^R' peco-history-selection
 ###################
 alias search-issues='hub browse -- issues/$(hub issue | peco | tr -s '\'' '\'' '\'' '\'' | cut -d'\'' '\'' -f 2 | cut -c 2-)'
 
+## fzf
+export FZF_TMUX=1
+export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --border"
+
 #############
 ## パス設定 ##
 ############
