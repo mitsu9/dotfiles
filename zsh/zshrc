@@ -170,6 +170,35 @@ export PATH=$PATH:$HOME/.asdf/shim
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 
+######################
+## useful functions ##
+######################
+function set-aws-sts-session-token {
+  unset AWS_ACCESS_KEY_ID
+  unset AWS_SECRET_ACCESS_KEY
+  unset AWS_SESSION_TOKEN
+
+  read SERIAL_NUMBER\?'Input MFA Serial Number: '
+  read TOKEN_CODE\?'Input MFA Code: '
+
+  OUTPUT=`aws sts get-session-token \
+    --serial-number ${SERIAL_NUMBER} \
+    --token-code ${TOKEN_CODE}`
+
+  AWS_ACCESS_KEY_ID=`echo $OUTPUT | jq -r .Credentials.AccessKeyId`
+  AWS_SECRET_ACCESS_KEY=`echo $OUTPUT | jq -r .Credentials.SecretAccessKey`
+  AWS_SESSION_TOKEN=`echo $OUTPUT | jq -r .Credentials.SessionToken`
+
+  export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+  export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+  export AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN
+
+  echo Set envs
+  echo AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+  echo AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+  echo AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN
+}
+
 ###################
 ## local setting ##
 ###################
