@@ -138,8 +138,8 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 # go
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/.go:$HOME/.ghq
+export PATH=$PATH:$HOME/.go/bin
 # nodenev
 export PATH=$HOME/.nodenv/bin:$PATH
 eval "$(nodenv init -)"
