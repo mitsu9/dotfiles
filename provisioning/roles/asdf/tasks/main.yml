@@ -1,0 +1,11 @@
+- name: git clone asdf
+  git:
+    repo: https://github.com/asdf-vm/asdf.git
+    dest: "{{ asdf.dir }}"
+    version: "{{ asdf.version }}"
+
+- name: add plugins
+  command: asdf plugin add {{ item }}
+  with_items:
+    - "{{ asdf.plugins }}"
+  failed_when: false

@@ -3,3 +3,10 @@ homebrew:
     - go
     - jq
     - tig
+
+asdf:
+  dir:     '{{ home_path }}/.asdf'
+  version: v0.8.0
+  plugins:
+    - ruby
+    - elixir
