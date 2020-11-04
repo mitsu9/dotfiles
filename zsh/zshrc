@@ -156,6 +156,9 @@ export PATH=~/.local/bin:$PATH
 # rust
 export PATH=$HOME/.cargo/env:$PATH
 
+# gcloud
+if [ -f '/Users/mitsunobu.homma/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mitsunobu.homma/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/mitsunobu.homma/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mitsunobu.homma/google-cloud-sdk/completion.zsh.inc'; fi
 ###########
 ## ctags ##
 ###########
