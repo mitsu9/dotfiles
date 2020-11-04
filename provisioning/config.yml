@@ -1,0 +1,5 @@
+homebrew:
+  packages:
+    - go
+    - jq
+    - tig
