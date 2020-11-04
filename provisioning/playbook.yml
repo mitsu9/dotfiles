@@ -8,3 +8,4 @@
   roles:
     - role: homebrew
     - role: asdf
+    - role: go

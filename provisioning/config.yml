@@ -10,3 +10,7 @@ asdf:
   plugins:
     - ruby
     - elixir
+
+go:
+  packages:
+    - github.com/x-motemen/ghq

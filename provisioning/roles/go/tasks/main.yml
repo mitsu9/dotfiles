@@ -1,0 +1,5 @@
+- name: install go packages
+  command: go get {{ item }}
+  with_items:
+    - '{{ go.packages }}'
+  when: go.packages
