@@ -1,4 +1,10 @@
 homebrew:
+  applications:
+    - alacritty
+    - alfred
+    - google-chrome
+    - notion
+    - slack
   packages:
     - go
     - jq
