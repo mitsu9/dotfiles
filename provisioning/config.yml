@@ -14,3 +14,11 @@ asdf:
 go:
   packages:
     - github.com/x-motemen/ghq
+
+link:
+  zsh/zshrc: .zshrc
+  vim/vimrc: .vimrc
+  git/gitconfig: .gitconfig
+  git/git_template: .git_template
+  tmux/tmux.conf: .tmux.conf
+  alacritty.yml: .config/alacritty/alacritty.yml
