@@ -1,0 +1,9 @@
+- name: git clone vim
+  git:
+    repo: https://github.com/vim/vim.git
+    dest: '{{ vim.dir }}'
+
+- name: make vim
+  shell: make && sudo make install
+  args:
+    chdir: '{{ vim.dir | quote }}/src/'

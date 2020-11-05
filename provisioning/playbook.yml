@@ -11,3 +11,4 @@
     - role: homebrew
     - role: asdf
     - role: go
+    - role: vim

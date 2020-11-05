@@ -28,3 +28,6 @@ link:
   git/git_template: .git_template
   tmux/tmux.conf: .tmux.conf
   alacritty.yml: .config/alacritty/alacritty.yml
+
+vim:
+  dir: '{{ home_path }}/vim'
