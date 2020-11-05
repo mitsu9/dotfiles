@@ -1,3 +1,10 @@
+- name: create parent dirs
+  file:
+    dest:    '{{ home_path }}/{{ item }}'
+    state:   directory
+    recurse: yes
+  with_items: '{{ link.values() | map("dirname") | unique | list }}'
+
 - name: create symlinks
   file:
     src:   '{{ dotfiles_path }}/{{ item.key }}'
