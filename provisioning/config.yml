@@ -2,6 +2,7 @@ homebrew:
   applications:
     - alacritty
     - alfred
+    - docker
     - google-chrome
     - notion
     - slack
@@ -9,6 +10,8 @@ homebrew:
     - go
     - jq
     - tig
+    - tmux
+    - peco
 
 asdf:
   dir:     '{{ home_path }}/.asdf'
