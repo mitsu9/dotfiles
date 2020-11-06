@@ -7,3 +7,12 @@
   shell: make && sudo make install
   args:
     chdir: '{{ vim.dir | quote }}/src/'
+
+- name: create .vim/autoload dir
+  file:
+    dest:    '{{ home_path }}/.vim/autoload'
+    state:   directory
+
+- name: install vim-plug
+  get_url: url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+           dest='{{ home_path }}/.vim/autoload/plug.vim'
