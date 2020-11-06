@@ -79,6 +79,7 @@ Plug 'andymass/vim-matchup'
 call plug#end()
 
 colorscheme iceberg
+set bg=dark
 
 "" lsp settings
 " ref. https://mattn.kaoriya.net/software/vim/20191231213507.htm
