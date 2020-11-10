@@ -8,6 +8,7 @@ homebrew:
     - slack
   packages:
     - ag
+    - fzf
     - git
     - go
     - hub
