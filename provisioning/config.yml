@@ -7,8 +7,10 @@ homebrew:
     - notion
     - slack
   packages:
+    - ag
     - git
     - go
+    - hub
     - jq
     - tig
     - tmux
