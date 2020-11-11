@@ -23,6 +23,8 @@
   templatedir = ~/.git_template
 [push]
   default = current
+[pull]
+  ff = only
 [ghq]
   root = ~/.go/src
   root = ~/.ghq
