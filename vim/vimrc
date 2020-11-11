@@ -122,6 +122,10 @@ nnoremap L $
 noremap ; :
 noremap : ;
 
+" fzf
+noremap ff :GFiles<CR>
+noremap fb :Buffers<CR>
+
 " ctrlp
 if executable('ag')
   let g:ctrlp_use_caching = 0
