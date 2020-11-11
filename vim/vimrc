@@ -119,8 +119,8 @@ nnoremap H ^
 nnoremap L $
 
 " ノーマルモード時だけ ; と : を入れ替える
-nnoremap ; :
-nnoremap : ;
+noremap ; :
+noremap : ;
 
 " ctrlp
 if executable('ag')
