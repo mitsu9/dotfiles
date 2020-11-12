@@ -9,6 +9,7 @@ homebrew:
     - slack
   packages:
     - ag
+    - direnv
     - fzf
     - git
     - go
