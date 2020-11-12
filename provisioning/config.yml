@@ -25,6 +25,7 @@ asdf:
   plugins:
     - ruby
     - elixir
+    - erlang
 
 go:
   packages:
