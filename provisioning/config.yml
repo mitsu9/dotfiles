@@ -4,6 +4,7 @@ homebrew:
     - alfred
     - docker
     - google-chrome
+    - google-cloud-sdk
     - notion
     - slack
   packages:
