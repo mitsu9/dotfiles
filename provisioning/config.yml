@@ -27,6 +27,7 @@ asdf:
     - ruby
     - elixir
     - erlang
+    - node
 
 go:
   packages:
