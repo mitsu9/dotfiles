@@ -165,6 +165,9 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 # direnv
 eval "$(direnv hook zsh)"
 
+# mysql@5.7
+export PATH=/usr/local/opt/mysql@5.7/bin/:$PATH
+
 ###########
 ## ctags ##
 ###########

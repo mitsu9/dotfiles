@@ -17,6 +17,7 @@ homebrew:
     - gpg
     - hub
     - jq
+    - mysql@5.7
     - tig
     - tmux
     - peco
