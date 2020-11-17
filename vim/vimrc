@@ -78,6 +78,8 @@ Plug 'tyru/open-browser-github.vim'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 call plug#end()
 
 colorscheme iceberg
@@ -139,6 +141,9 @@ nnoremap ,, :<c-u>CtrlPMRUFiles<cr>
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
+" mhinz/vim-mix-format
+let g:mix_format_on_save = 1
 
 " filetype毎のインデントの設定
 if has("autocmd")
