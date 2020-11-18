@@ -130,6 +130,7 @@ noremap : ;
 " fzf
 noremap ff :GFiles<CR>
 noremap fb :Buffers<CR>
+let g:fzf_layout = { 'down': '~40%' }
 
 " ctrlp
 if executable('ag')
