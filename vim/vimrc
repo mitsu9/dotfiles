@@ -54,6 +54,7 @@ if exists('+termguicolors')
 endif
 
 "" Plugin
+let g:plug_shallow = 0
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
