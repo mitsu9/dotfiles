@@ -66,6 +66,7 @@ Plug 'tpope/vim-surround'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'solarnz/thrift.vim'
+Plug 'chrisbra/csv.vim'
 call plug#end()
 
 "" Colorscheme
