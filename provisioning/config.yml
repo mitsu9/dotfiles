@@ -11,12 +11,14 @@ homebrew:
     - ag
     - autoconf
     - direnv
+    - fswatch
     - fzf
     - git
     - go
     - gpg
     - hub
     - jq
+    - kustomize
     - mysql@5.7
     - tig
     - tmux
