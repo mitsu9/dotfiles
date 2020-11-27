@@ -10,6 +10,7 @@ homebrew:
   packages:
     - ag
     - autoconf
+    - coreutils
     - direnv
     - fswatch
     - fzf
