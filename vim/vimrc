@@ -77,7 +77,7 @@ colorscheme iceberg
 set bg=dark
 
 "" lsp settings
-function! s:on_jsp_buffer_enabled() abort
+function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
   setlocal signcolumn=yes
   if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
