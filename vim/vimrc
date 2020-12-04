@@ -80,6 +80,7 @@ Plug 'tpope/vim-surround'
 Plug 'cohama/lexima.vim'
 
 " view/style
+Plug 'machakann/vim-highlightedyank'
 Plug 'markonm/traces.vim'
 call plug#end()
 
@@ -139,6 +140,9 @@ let g:fzf_layout = { 'down': '~40%' }
 
 " mhinz/vim-mix-format
 let g:mix_format_on_save = 1
+
+" machakann/vim-highlightedyank
+let g:highlightedyank_highlight_duration = 300
 
 " filetype毎のインデントの設定
 if has("autocmd")
