@@ -70,6 +70,7 @@ Plug 'mhinz/vim-mix-format'
 Plug 'solarnz/thrift.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'markonm/traces.vim'
+Plug 'cohama/lexima.vim'
 call plug#end()
 
 "" Colorscheme
