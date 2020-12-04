@@ -41,13 +41,20 @@ endif
 "" Plugin
 let g:plug_shallow = 0
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+" file
 Plug 'scrooloose/nerdtree'
-Plug 'itchyny/lightline.vim'
-Plug 'cocopon/iceberg.vim'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+
+" git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" color
+Plug 'cocopon/iceberg.vim'
+
+" status line
+Plug 'itchyny/lightline.vim'
 
 " lsp
 Plug 'prabirshrestha/async.vim'
@@ -59,16 +66,21 @@ Plug 'mattn/vim-lsp-icons'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 
+" language
 Plug 'hashivim/vim-terraform'
-Plug 'andymass/vim-matchup'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'solarnz/thrift.vim'
 Plug 'chrisbra/csv.vim'
-Plug 'markonm/traces.vim'
+
+" extension
+Plug 'andymass/vim-matchup'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'cohama/lexima.vim'
+
+" view/style
+Plug 'markonm/traces.vim'
 call plug#end()
 
 "" Colorscheme
