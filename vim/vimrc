@@ -60,8 +60,6 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 
 Plug 'hashivim/vim-terraform'
-Plug 'tyru/open-browser.vim'
-Plug 'tyru/open-browser-github.vim'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -126,11 +124,6 @@ noremap : ;
 noremap ff :GFiles<CR>
 noremap fb :Buffers<CR>
 let g:fzf_layout = { 'down': '~40%' }
-
-" open-browser.vim
-let g:netrw_nogx = 1 " disable netrw's gx mapping.
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
 
 " mhinz/vim-mix-format
 let g:mix_format_on_save = 1
