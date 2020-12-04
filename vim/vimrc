@@ -143,9 +143,6 @@ if has("autocmd")
   autocmd FileType go setlocal sw=4 ts=4 et
 end
 
-" NOTE: どこかで上書きされるので最後に記述
-set shortmess-=S
-
 " 行末の空白や最終行の空行を削除
 autocmd BufWritePre * call s:remove_unnecessary_space()
 function! s:remove_unnecessary_space()
