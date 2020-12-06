@@ -134,8 +134,8 @@ noremap ; :
 noremap : ;
 
 " fzf
-noremap ff :GFiles<CR>
-noremap fb :Buffers<CR>
+noremap <C-p> :GFiles<CR>
+noremap <C-b> :Buffers<CR>
 let g:fzf_layout = { 'down': '~40%' }
 
 " mhinz/vim-mix-format
