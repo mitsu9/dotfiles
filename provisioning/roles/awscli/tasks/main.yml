@@ -1,0 +1,9 @@
+- name: Download aws command
+  get_url:
+    url: https://awscli.amazonaws.com/AWSCLIV2.pkg
+    dest: /tmp/AWSCLIV2.pkg
+    validate_certs: no
+
+- name: Install aws command
+  become: yes
+  command: "installer -pkg /tmp/AWSCLIV2.pkg -target /"

@@ -9,6 +9,7 @@
   roles:
     - role: link
     - role: homebrew
+    - role: awscli
     - role: asdf
     - role: go
     - role: vim
