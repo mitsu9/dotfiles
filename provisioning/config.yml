@@ -22,6 +22,7 @@ homebrew:
     - kustomize
     - mysql@5.7
     - tig
+    - tree
     - tmux
     - peco
 
