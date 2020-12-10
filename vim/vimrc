@@ -49,6 +49,7 @@ Plug 'junegunn/fzf.vim'
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'rhysd/conflict-marker.vim'
 
 " color
 Plug 'cocopon/iceberg.vim'
