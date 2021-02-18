@@ -3,7 +3,7 @@
   email = mitsunobu.h.9@gmail.com
 [core]
   editor = vim
-  excludefile = ~/.gitignore # globalな.gitignore
+  excludesfile = ~/.gitignore # globalな.gitignore
 [alias]
   c  = commit
   cm = commit --amend
