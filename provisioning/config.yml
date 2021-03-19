@@ -36,6 +36,7 @@ asdf:
     - erlang
     - nodejs
     - python
+    - terraform
 
 go:
   packages:
