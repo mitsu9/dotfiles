@@ -25,6 +25,7 @@ homebrew:
     - tree
     - tmux
     - peco
+    - yamllint
 
 asdf:
   dir:     '{{ home_path }}/.asdf'
