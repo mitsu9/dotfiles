@@ -24,6 +24,7 @@ homebrew:
     - tig
     - tree
     - tmux
+    - packer
     - peco
     - yamllint
 
