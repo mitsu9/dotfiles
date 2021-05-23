@@ -3,7 +3,7 @@
     update_homebrew: yes
 
 - name: install cask apps
-  homebrew_cask:
+  community.general.homebrew_cask:
     name:  "{{ homebrew.applications }}"
     state: present
     accept_external_apps: yes
