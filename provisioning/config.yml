@@ -7,6 +7,7 @@ homebrew:
     - google-cloud-sdk
     - notion
     - slack
+    - typora
   packages:
     - ag
     - autoconf
