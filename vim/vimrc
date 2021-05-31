@@ -152,7 +152,7 @@ let g:highlightedyank_highlight_duration = 300
 " kana/vim-operator-replace
 map r <Plug>(operator-replace)
 " tyru/operator-camelize.vim
-map c <Plug>(operator-camelize-toggle)
+map ct <Plug>(operator-camelize-toggle)
 
 " filetype毎のインデントの設定
 if has("autocmd")
