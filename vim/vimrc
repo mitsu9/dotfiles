@@ -80,6 +80,9 @@ Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'cohama/lexima.vim'
+Plug 'kana/vim-operator-user'
+Plug 'kana/vim-operator-replace'
+Plug 'tyru/operator-camelize.vim'
 
 " view/style
 Plug 'machakann/vim-highlightedyank'
@@ -145,6 +148,11 @@ let g:mix_format_on_save = 1
 
 " machakann/vim-highlightedyank
 let g:highlightedyank_highlight_duration = 300
+
+" kana/vim-operator-replace
+map r <Plug>(operator-replace)
+" tyru/operator-camelize.vim
+map c <Plug>(operator-camelize-toggle)
 
 " filetype毎のインデントの設定
 if has("autocmd")
