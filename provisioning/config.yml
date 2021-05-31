@@ -43,6 +43,7 @@ asdf:
 go:
   packages:
     - github.com/x-motemen/ghq
+    - golang.org/x/tools/cmd/goimports
 
 link:
   zsh/zshrc: .zshrc
