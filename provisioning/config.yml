@@ -5,6 +5,7 @@ homebrew:
     - docker
     - google-chrome
     - google-cloud-sdk
+    - kindle
     - notion
     - slack
     - typora
