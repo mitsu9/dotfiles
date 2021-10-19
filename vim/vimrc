@@ -87,6 +87,7 @@ Plug 'tyru/operator-camelize.vim'
 " view/style
 Plug 'machakann/vim-highlightedyank'
 Plug 'markonm/traces.vim'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 "" Colorscheme
@@ -153,6 +154,9 @@ let g:highlightedyank_highlight_duration = 300
 map r <Plug>(operator-replace)
 " tyru/operator-camelize.vim
 map ct <Plug>(operator-camelize-toggle)
+
+" junegunn/vim-easy-align
+xmap ga <Plug>(EasyAlign)
 
 " filetype毎のインデントの設定
 if has("autocmd")
