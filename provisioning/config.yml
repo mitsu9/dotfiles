@@ -25,6 +25,7 @@ homebrew:
     - kustomize
     - minikube
     - mysql@5.7
+    - openssl
     - tig
     - tree
     - tmux
