@@ -3,6 +3,7 @@ homebrew:
     - alacritty
     - alfred
     - docker
+    - figma
     - google-chrome
     - google-cloud-sdk
     - kindle
