@@ -27,6 +27,7 @@ homebrew:
     - minikube
     - mysql@5.7
     - openssl
+    - terragrunt
     - tig
     - tree
     - tmux
