@@ -184,3 +184,19 @@ function! s:remove_unnecessary_space()
             $delete _
     endwhile
 endfunction
+
+" golang: 実装ファイル→testファイルを開くコマンド
+command! VsplitGoTest call s:vsplit_go_test()
+function! s:vsplit_go_test()
+  let filename = expand("%")
+  let test_filename = substitute(filename, ".go", "_test.go", "g")
+  echo test_filename
+  execute "vsplit" test_filename
+
+  " TODO: 残タスク
+  " - goでないファイルの時は無視(error出力)
+  " - テストファイルがない場合無視(error出力)
+  " - 既にファイルが開かれていた場合, そのバッファを垂直分割して出す
+  " - テストファイルを開いている時は実装ファイルを開く
+endfunction
+noremap ot :VsplitGoTest<CR>
