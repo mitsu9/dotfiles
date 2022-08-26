@@ -88,6 +88,7 @@ Plug 'tyru/operator-camelize.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'markonm/traces.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 "" Colorscheme
