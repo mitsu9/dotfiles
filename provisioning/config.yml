@@ -37,7 +37,7 @@ homebrew:
     - yamllint
 
 asdf:
-  dir:     '{{ home_path }}/.asdf'
+  dir: '{{ home_path }}/.asdf'
   version: v0.8.0
   plugins:
     - ruby
@@ -46,6 +46,7 @@ asdf:
     - nodejs
     - python
     - terraform
+    - golang
 
 go:
   packages:
