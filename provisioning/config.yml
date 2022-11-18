@@ -10,6 +10,7 @@ homebrew:
     - notion
     - slack
     - typora
+    - visual-studio-code
   packages:
     - ag
     - autoconf
@@ -62,3 +63,8 @@ link:
 
 vim:
   dir: '{{ home_path }}/vim'
+
+vscode:
+  extensions:
+    - MS-CEINTL.vscode-language-pack-ja
+    - cocopon.iceberg-theme

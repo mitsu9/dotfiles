@@ -1,0 +1,5 @@
+- name: add extension
+  command: code --install-extension {{ item }} --force
+  with_items:
+    - "{{ vscode.extensions }}"
+  failed_when: false

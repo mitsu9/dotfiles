@@ -13,3 +13,4 @@
     - role: asdf
     - role: go
     - role: vim
+    - role: vscode
