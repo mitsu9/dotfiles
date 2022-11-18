@@ -1,0 +1,11 @@
+- name: create dir
+  file:
+    dest: '{{ home_path }}/development'
+    state: directory
+    recurse: yes
+
+- name: Download flutter SDK
+  unarchive:
+    src: https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_3.3.8-stable.zip
+    dest: '{{ home_path }}/development'
+    remote_src: yes

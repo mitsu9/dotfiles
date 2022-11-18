@@ -2,6 +2,7 @@ homebrew:
   applications:
     - alacritty
     - alfred
+    - android-studio
     - docker
     - figma
     - google-chrome

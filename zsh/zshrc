@@ -169,6 +169,9 @@ export PATH=$PATH:$HOME/.asdf/shim
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 
+# flutter SDK
+export PATH=$PATH:$HOME/development/flutter/bin
+
 ######################
 ## useful functions ##
 ######################
