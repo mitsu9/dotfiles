@@ -9,3 +9,13 @@
   with_items:
     - "{{ asdf.plugins }}"
   failed_when: false
+
+- name: install global language
+  command: asdf install {{ item.key }} {{ item.value }}
+  with_dict: '{{ asdf.global_settings  }}'
+  failed_when: false
+
+- name: set global language
+  command: asdf global {{ item.key }} {{ item.value }}
+  with_dict: '{{ asdf.global_settings  }}'
+  failed_when: false

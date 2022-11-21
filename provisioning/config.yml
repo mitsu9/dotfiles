@@ -49,6 +49,8 @@ asdf:
     - python
     - terraform
     - golang
+  global_settings:
+    golang: 1.19.3
 
 go:
   packages:
