@@ -9,6 +9,3 @@
   with_items:
     - "{{ asdf.plugins }}"
   failed_when: false
-
-- name: import the Node.js release team's OpenPGP keys
-  command: bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
