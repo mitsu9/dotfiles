@@ -54,8 +54,8 @@ asdf:
 
 go:
   packages:
-    - github.com/x-motemen/ghq
-    - golang.org/x/tools/cmd/goimports
+    - github.com/x-motemen/ghq@latest
+    - golang.org/x/tools/cmd/goimports@latest
 
 link:
   zsh/zshrc: .zshrc
