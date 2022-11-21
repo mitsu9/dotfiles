@@ -3,6 +3,7 @@
     dest:    '{{ home_path }}/{{ item }}'
     state:   directory
     recurse: yes
+  when: item != ""
   with_items: '{{ link.values() | map("dirname") | unique | list }}'
 
 - name: create symlinks
