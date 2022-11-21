@@ -166,6 +166,9 @@ map ct <Plug>(operator-camelize-toggle)
 " junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
 
+" Plug 'scrooloose/nerdtree'
+let NERDTreeShowHidden=1
+
 " filetype毎のインデントの設定
 if has("autocmd")
   filetype plugin on
