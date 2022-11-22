@@ -18,3 +18,9 @@ $ git clone git@github.com:mitsu9/dotfiles.git
 $ cd dotfiles
 $ ./up
 ```
+
+- dockerを起動する
+
+```
+$ open /Applications/Docker.app
+```
