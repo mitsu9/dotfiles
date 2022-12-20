@@ -3,6 +3,7 @@ homebrew:
     - alacritty
     - alfred
     - android-studio
+    - background-music
     - clipy
     - docker
     - figma
