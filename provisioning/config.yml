@@ -11,6 +11,7 @@ homebrew:
     - google-cloud-sdk
     - kindle
     - notion
+    - obsidian
     - slack
     - typora
     - visual-studio-code
