@@ -9,6 +9,12 @@
     accept_external_apps: yes
   when: homebrew.applications
 
+- name: tap repositories
+  community.general.homebrew_tap:
+    name:  "{{ homebrew.tap_repositories }}"
+    state: present
+  when: homebrew.tap_repositories
+
 - name: install homebrew packages
   homebrew:
     name: "{{ homebrew.packages }}"

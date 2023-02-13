@@ -15,10 +15,13 @@ homebrew:
     - slack
     - typora
     - visual-studio-code
+  tap_repositories:
+    - dbt-labs/dbt
   packages:
     - ag
     - autoconf
     - coreutils
+    - dbt-bigquery
     - direnv
     - fswatch
     - fzf
