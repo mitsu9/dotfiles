@@ -15,8 +15,8 @@
   pl = pull
   m = merge
   nb = !git pull && git checkout -b
-  showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; };f"
-  openpr = "!f() { hub browse -- `git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%pull/%'`; };f"
+  showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $2...$1 | grep 'Merge pull request #' | head -n 1; };f"
+  openpr = "!f() { hub browse -- `git log --merges --oneline --reverse --ancestry-path $2...$1 | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%pull/%'`; };f"
   blamepr = "!f() { git blame $1 | fzf | cut -f 1 -d ' ' | xargs -I@ git openpr @; };f"
   pr = "!f() { git blame $1 -L $2,$2 | cut -f 1 -d ' ' | xargs -I@ git openpr @; };f"
 [init]
