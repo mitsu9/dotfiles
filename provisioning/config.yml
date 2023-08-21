@@ -25,6 +25,7 @@ homebrew:
     - direnv
     - fswatch
     - fzf
+    - gh
     - git
     - go
     - gpg
