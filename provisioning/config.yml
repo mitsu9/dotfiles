@@ -94,3 +94,7 @@ vscode:
     - windmilleng.vscode-go-autotest
     # flutter
     - Dart-Code.flutter
+    # swagger
+    - Arjun.swagger-viewer
+    # terraform
+    - HashiCorp.terraform
