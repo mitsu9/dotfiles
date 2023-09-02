@@ -111,7 +111,7 @@ function! s:on_lsp_buffer_enabled() abort
   inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
 endfunction
 
-augroup lsp_insgall
+augroup lsp_install
   au!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
