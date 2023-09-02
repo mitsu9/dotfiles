@@ -63,6 +63,10 @@ go:
   packages:
     - github.com/x-motemen/ghq@latest
     - golang.org/x/tools/cmd/goimports@latest
+    - golang.org/x/tools/gopls@latest
+    - github.com/ramya-rao-a/go-outline@latest
+    - github.com/766b/go-outliner@latest
+    - github.com/go-delve/delve/cmd/dlv@latest
 
 link:
   zsh/zshrc: .zshrc
@@ -78,7 +82,15 @@ vim:
 
 vscode:
   extensions:
+    # base
     - MS-CEINTL.vscode-language-pack-ja
-    - cocopon.iceberg-theme
+    - alefragnani.project-manager
     - vscodevim.vim
+    # color
+    - cocopon.iceberg-theme
+    # go
+    - golang.Go
+    - 766b.go-outliner
+    - windmilleng.vscode-go-autotest
+    # flutter
     - Dart-Code.flutter
