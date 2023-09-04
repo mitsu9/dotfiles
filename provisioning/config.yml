@@ -86,6 +86,7 @@ vscode:
     - MS-CEINTL.vscode-language-pack-ja
     - alefragnani.project-manager
     - vscodevim.vim
+    - MS-vsliveshare.vsliveshare
     # color
     - cocopon.iceberg-theme
     # go
