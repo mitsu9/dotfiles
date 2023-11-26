@@ -31,6 +31,7 @@ homebrew:
     - go
     - gpg
     - hub
+    - java
     - jq
     - kubectl
     - kustomize
