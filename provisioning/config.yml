@@ -68,6 +68,11 @@ go:
     - github.com/ramya-rao-a/go-outline@latest
     - github.com/766b/go-outliner@latest
     - github.com/go-delve/delve/cmd/dlv@latest
+    - github.com/davidrjenni/reftools/cmd/fillstruct@latest
+    - github.com/cweill/gotests/gotests@v1.6.0
+    - honnef.co/go/tools/cmd/staticcheck@2022.1
+    - github.com/hhatto/gocloc/cmd/gocloc@latest
+    - github.com/fzipp/gocyclo/cmd/gocyclo@latest
 
 link:
   zsh/zshrc: .zshrc
@@ -88,6 +93,8 @@ vscode:
     - alefragnani.project-manager
     - vscodevim.vim
     - MS-vsliveshare.vsliveshare
+    - inu1255.easy-snippet
+    - eamodio.gitlens
     # color
     - cocopon.iceberg-theme
     # go
@@ -100,3 +107,10 @@ vscode:
     - Arjun.swagger-viewer
     # terraform
     - HashiCorp.terraform
+    # docker
+    - ms-azuretools.vscode-docker
+    # makefile
+    - ms-vscode.makefile-tools
+    # TypeScript
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
