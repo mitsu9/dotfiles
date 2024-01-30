@@ -75,6 +75,7 @@ go:
     - github.com/fzipp/gocyclo/cmd/gocyclo@latest
 
 link:
+  asdf/asdfrc: .asdfrc
   zsh/zshrc: .zshrc
   vim/vimrc: .vimrc
   git/gitconfig: .gitconfig
