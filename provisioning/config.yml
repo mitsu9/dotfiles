@@ -115,3 +115,5 @@ vscode:
     # TypeScript
     - dbaeumer.vscode-eslint
     - esbenp.prettier-vscode
+    # perl
+    - kraih.mojolicious
