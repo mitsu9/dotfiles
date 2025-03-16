@@ -10,6 +10,7 @@ homebrew:
     - figma
     - google-chrome
     - google-cloud-sdk
+    - google-japanese-ime
     - kindle
     - notion
     - obsidian
