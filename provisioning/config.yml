@@ -4,6 +4,7 @@ homebrew:
     - alfred
     - android-studio
     - background-music
+    - claude
     - clipy
     - docker
     - figma
