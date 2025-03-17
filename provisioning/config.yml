@@ -62,6 +62,7 @@ asdf:
     - golang
   global_settings:
     golang: 1.19.3
+    nodejs: 23.10.0
 
 go:
   packages:
@@ -76,6 +77,10 @@ go:
     - honnef.co/go/tools/cmd/staticcheck@2022.1
     - github.com/hhatto/gocloc/cmd/gocloc@latest
     - github.com/fzipp/gocyclo/cmd/gocyclo@latest
+
+npm:
+  packages:
+    - "@abhiz123/todoist-mcp-server"
 
 link:
   asdf/asdfrc: .asdfrc

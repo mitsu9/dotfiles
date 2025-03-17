@@ -1,0 +1,5 @@
+- name: install npm packages
+  command: npm install -g {{ item }}
+  with_items:
+    - '{{ npm.packages }}'
+  when: npm.packages
