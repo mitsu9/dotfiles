@@ -40,6 +40,7 @@ homebrew:
     - kustomize
     - minikube
     - mysql@5.7
+    - node
     - openssl
     - terragrunt
     - tig
