@@ -83,6 +83,7 @@ go:
 npm:
   packages:
     - "@abhiz123/todoist-mcp-server"
+    - "@ubie-oss/slack-mcp-server"
 
 link:
   asdf/asdfrc: .asdfrc
@@ -91,6 +92,7 @@ link:
   git/gitconfig: .gitconfig
   git/gitignore: .gitignore
   git/git_template: .git_template
+  npm/npmrc: .npmrc
   tmux/tmux.conf: .tmux.conf
   alacritty.yml: .config/alacritty/alacritty.yml
 
