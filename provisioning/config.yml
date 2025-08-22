@@ -61,6 +61,11 @@ asdf:
     golang: 1.19.3
     nodejs: 23.10.0
 
+github:
+  repositories:
+    - git@github.com:mitsu9/obsidian-vault.git
+    - git@github.com:mitsu9/cynosure-ai.git
+
 go:
   packages:
     - github.com/x-motemen/ghq@latest
