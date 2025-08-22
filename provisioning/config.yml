@@ -24,7 +24,6 @@ homebrew:
     - autoconf
     - cocoapods
     - coreutils
-    - dbt-bigquery
     - direnv
     - fswatch
     - fzf
