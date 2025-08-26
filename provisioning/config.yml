@@ -95,7 +95,7 @@ link:
   git/git_template: .git_template
   npm/npmrc: .npmrc
   tmux/tmux.conf: .tmux.conf
-  alacritty.yml: .config/alacritty/alacritty.yml
+  alacritty.toml: .config/alacritty/alacritty.toml
 
 copy:
   zsh/zshrc_local.sample: .zshrc_local
