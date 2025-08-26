@@ -97,6 +97,9 @@ link:
   tmux/tmux.conf: .tmux.conf
   alacritty.yml: .config/alacritty/alacritty.yml
 
+copy:
+  zsh/zshrc_local.sample: .zshrc_local
+
 vim:
   dir: '{{ home_path }}/vim'
 

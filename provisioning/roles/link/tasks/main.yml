@@ -12,3 +12,9 @@
     dest:  '{{ home_path }}/{{ item.value }}'
     state: link
   with_dict: '{{ link }}'
+
+- name: copy files
+  copy:
+    src:   '{{ dotfiles_path }}/{{ item.key }}'
+    dest:  '{{ home_path }}/{{ item.value }}'
+  with_dict: '{{ copy }}'
