@@ -14,6 +14,7 @@ homebrew:
     - google-japanese-ime
     - notion
     - obsidian
+    - ovice
     - slack
     - typora
     - visual-studio-code
