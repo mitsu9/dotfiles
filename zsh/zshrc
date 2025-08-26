@@ -155,10 +155,6 @@ export PATH=$HOME/.cargo/env:$PATH
 # git
 export PATH=/usr/local/bin/git:$PATH
 
-# gcloud
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -175,7 +171,6 @@ alias ctags="`brew --prefix`/bin/ctags"
 export PATH=$HOME/.asdf/bin:$PATH
 export PATH=$PATH:$HOME/.asdf/shim
 source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
 
 # flutter SDK
 export PATH=$PATH:$HOME/development/flutter/bin
