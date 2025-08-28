@@ -12,6 +12,7 @@
     - role: awscli
     - role: asdf
     - role: go
+    - role: npm
     - role: vim
     - role: vscode
     - role: flutter
