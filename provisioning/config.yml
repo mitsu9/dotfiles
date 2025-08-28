@@ -83,7 +83,6 @@ go:
 npm:
   packages:
     - "@abhiz123/todoist-mcp-server"
-    - "@ubie-oss/slack-mcp-server"
     - "@anthropic-ai/claude-code"
 
 link:
