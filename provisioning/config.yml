@@ -22,6 +22,7 @@ homebrew:
     - dbt-labs/dbt
   packages:
     - ag
+    - asdf
     - autoconf
     - cocoapods
     - coreutils
@@ -48,8 +49,6 @@ homebrew:
     - yamllint
 
 asdf:
-  dir: '{{ home_path }}/.asdf'
-  version: v0.8.0
   plugins:
     - ruby
     - elixir

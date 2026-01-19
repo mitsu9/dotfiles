@@ -1,9 +1,3 @@
-- name: git clone asdf
-  git:
-    repo: https://github.com/asdf-vm/asdf.git
-    dest: "{{ asdf.dir }}"
-    version: "{{ asdf.version }}"
-
 - name: add plugins
   command: asdf plugin add {{ item }}
   with_items:
@@ -16,6 +10,6 @@
   failed_when: false
 
 - name: set global language
-  command: asdf global {{ item.key }} {{ item.value }}
+  command: asdf set --home {{ item.key }} {{ item.value }}
   with_dict: '{{ asdf.global_settings  }}'
   failed_when: false

@@ -167,10 +167,7 @@ export PATH=/usr/local/opt/mysql@5.7/bin/:$PATH
 alias ctags="`brew --prefix`/bin/ctags"
 
 # asdf
-#autoload -Uz compinit && compinit
-export PATH=$HOME/.asdf/bin:$PATH
-export PATH=$PATH:$HOME/.asdf/shim
-source $HOME/.asdf/asdf.sh
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # flutter SDK
 export PATH=$PATH:$HOME/development/flutter/bin
