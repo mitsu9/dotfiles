@@ -1,2 +1,8 @@
 - name: Install uv
   shell: "curl -LsSf https://astral.sh/uv/install.sh | sh"
+
+- name: Install uv tool
+  command: uv tool install {{ item }}
+  with_items:
+    - '{{ uv.packages }}'
+  when: uv.packages

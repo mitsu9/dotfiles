@@ -85,6 +85,10 @@ npm:
     - "@abhiz123/todoist-mcp-server"
     - "@anthropic-ai/claude-code"
 
+uv:
+  packages:
+    - "specify-cli --from git+https://github.com/github/spec-kit.git"
+
 link:
   asdf/asdfrc: .asdfrc
   zsh/zshrc: .zshrc
