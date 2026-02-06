@@ -53,6 +53,8 @@ Plug 'rhysd/conflict-marker.vim'
 
 " color
 Plug 'cocopon/iceberg.vim'
+Plug 'nordtheme/vim'
+Plug 'morhetz/gruvbox'
 
 " status line
 Plug 'itchyny/lightline.vim'
@@ -92,7 +94,7 @@ Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 "" Colorscheme
-colorscheme iceberg
+colorscheme gruvbox
 set bg=dark
 
 "" lsp settings

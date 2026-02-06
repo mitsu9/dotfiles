@@ -517,6 +517,9 @@ key = "NumpadEnter"
 [general]
 live_config_reload = true
 working_directory = "None"
+import = [
+  "~/.config/alacritty/themes/themes/nord.toml"
+]
 
 [[mouse.bindings]]
 action = "PasteSelection"
@@ -526,33 +529,6 @@ mouse = "Middle"
 animation = "EaseOutExpo"
 color = "0xffffff"
 duration = 0
-
-[colors]
-draw_bold_text_with_bright_colors = true
-
-[colors.bright]
-black = "0x6b7089"
-blue = "0x91acd1"
-cyan = "0x95c4ce"
-green = "0xc0ca8e"
-magenta = "0xada0d3"
-red = "0xe98989"
-white = "0xd2d4de"
-yellow = "0xe9b189"
-
-[colors.normal]
-black = "0x161821"
-blue = "0x84a0c6"
-cyan = "0x89b8c2"
-green = "0xb4be82"
-magenta = "0xa093c7"
-red = "0xe27878"
-white = "0xc6c8d1"
-yellow = "0xe2a478"
-
-[colors.primary]
-background = "0x161821"
-foreground = "0xd2d4de"
 
 [cursor]
 style = "Block"
@@ -602,7 +578,8 @@ semantic_escape_chars = ''',│`|:"' ()[]{}<>'''
 decorations = "Buttonless"
 dynamic_padding = false
 dynamic_title = true
-opacity = 0.95
+opacity = 0.92
+blur = true
 startup_mode = "Windowed"
 
 [window.dimensions]
