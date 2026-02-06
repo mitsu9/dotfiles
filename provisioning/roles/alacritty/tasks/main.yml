@@ -1,0 +1,4 @@
+- name: git clone alacritty-theme
+  git:
+    repo: https://github.com/alacritty/alacritty-theme
+    dest: ~/.config/alacritty/themes

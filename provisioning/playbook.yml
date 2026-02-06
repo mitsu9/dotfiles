@@ -18,3 +18,4 @@
     - role: flutter
     - role: python
     - role: github
+    - role: alacritty
