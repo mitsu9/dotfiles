@@ -25,6 +25,7 @@ homebrew:
     - ag
     - asdf
     - autoconf
+    - chatgpt
     - cocoapods
     - coreutils
     - direnv
