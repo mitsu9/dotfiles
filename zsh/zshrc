@@ -161,6 +161,9 @@ eval "$(direnv hook zsh)"
 # mysql@5.7
 export PATH=/usr/local/opt/mysql@5.7/bin/:$PATH
 
+# claude code
+alias claude="~/.local/bin/claude"
+
 ###########
 ## ctags ##
 ###########
