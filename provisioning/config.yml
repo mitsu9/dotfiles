@@ -9,6 +9,7 @@ homebrew:
     - cursor
     - docker
     - figma
+    - ghostty
     - google-chrome
     - google-cloud-sdk
     - google-japanese-ime
