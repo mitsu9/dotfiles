@@ -103,6 +103,7 @@ link:
   npm/npmrc: .npmrc
   tmux/tmux.conf: .tmux.conf
   alacritty.toml: .config/alacritty/alacritty.toml
+  config/ghostty: .config/ghostty/config
 
 copy:
   zsh/zshrc_local.sample: .zshrc_local

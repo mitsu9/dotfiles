@@ -1,0 +1,13 @@
+theme = nord
+
+font-family = "Cica"
+font-size = 20
+
+keybind = "ctrl+h=previous_tab"
+keybind = "ctrl+l=next_tab"
+
+maximize = true
+desktop-notifications = true
+
+keybind = cmd+up=jump_to_prompt:-1
+keybind = cmd+down=jump_to_prompt:1
