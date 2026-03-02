@@ -6,6 +6,7 @@ homebrew:
     - background-music
     - claude
     - clipy
+    - codex
     - cursor
     - docker
     - figma
