@@ -90,6 +90,7 @@ npm:
   packages:
     - "@abhiz123/todoist-mcp-server"
     - "@anthropic-ai/claude-code"
+    - "@googleworkspace/cli"
 
 uv:
   packages:
