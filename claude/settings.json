@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch"
+      "WebFetch",
+      "WebSearch"
     ],
     "deny": [
       "Read(~/.ssh/**)",
