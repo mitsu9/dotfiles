@@ -71,8 +71,8 @@ asdf:
 
 github:
   repositories:
-    - git@github.com:mitsu9/obsidian-vault.git
-    - git@github.com:mitsu9/cynosure-ai.git
+    - git@github.com:mitsu9/Home.git
+    - git@github.com:mitsu9/homelab.git
 
 go:
   packages:
