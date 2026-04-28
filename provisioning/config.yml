@@ -92,6 +92,7 @@ npm:
     - "@abhiz123/todoist-mcp-server"
     - "@anthropic-ai/claude-code"
     - "@googleworkspace/cli"
+    - "obsidian-headless"
 
 uv:
   packages:
