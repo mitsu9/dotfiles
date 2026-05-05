@@ -13,6 +13,21 @@
     state: link
   with_dict: '{{ link }}'
 
+- name: create parent dirs (links list)
+  file:
+    dest:    '{{ home_path }}/{{ item.dest | dirname }}'
+    state:   directory
+    recurse: yes
+  when: (item.dest | dirname) != ""
+  loop: '{{ links | default([]) }}'
+
+- name: create symlinks (links list)
+  file:
+    src:   '{{ dotfiles_path }}/{{ item.src }}'
+    dest:  '{{ home_path }}/{{ item.dest }}'
+    state: link
+  loop: '{{ links | default([]) }}'
+
 - name: copy files
   copy:
     src:   '{{ dotfiles_path }}/{{ item.key }}'

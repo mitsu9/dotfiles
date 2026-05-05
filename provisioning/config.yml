@@ -112,6 +112,12 @@ link:
   config/codex.toml: .codex/config.toml
   claude/settings.json: .claude/settings.json
 
+links:
+  - src: ai-skills
+    dest: .claude/skills
+  - src: ai-skills
+    dest: .codex/skills
+
 copy:
   zsh/zshrc_local.sample: .zshrc_local
 
