@@ -98,28 +98,38 @@ uv:
   packages:
     - "specify-cli --from git+https://github.com/github/spec-kit.git"
 
-link:
-  asdf/asdfrc: .asdfrc
-  zsh/zshrc: .zshrc
-  vim/vimrc: .vimrc
-  git/gitconfig: .gitconfig
-  git/gitignore: .gitignore
-  git/git_template: .git_template
-  npm/npmrc: .npmrc
-  tmux/tmux.conf: .tmux.conf
-  alacritty.toml: .config/alacritty/alacritty.toml
-  config/ghostty: .config/ghostty/config
-  config/codex.toml: .codex/config.toml
-  claude/settings.json: .claude/settings.json
-
 links:
-  - src: ai-skills
+  - src: home/asdf/asdfrc
+    dest: .asdfrc
+  - src: home/zsh/zshrc
+    dest: .zshrc
+  - src: home/vim/vimrc
+    dest: .vimrc
+  - src: home/git/gitconfig
+    dest: .gitconfig
+  - src: home/git/gitignore
+    dest: .gitignore
+  - src: home/git/git_template
+    dest: .git_template
+  - src: home/npm/npmrc
+    dest: .npmrc
+  - src: home/tmux/tmux.conf
+    dest: .tmux.conf
+  - src: home/alacritty/alacritty.toml
+    dest: .config/alacritty/alacritty.toml
+  - src: home/ghostty/config
+    dest: .config/ghostty/config
+  - src: home/codex/config.toml
+    dest: .codex/config.toml
+  - src: home/claude/settings.json
+    dest: .claude/settings.json
+  - src: home/shared/ai-skills
     dest: .claude/skills
-  - src: ai-skills
+  - src: home/shared/ai-skills
     dest: .codex/skills
 
 copy:
-  zsh/zshrc_local.sample: .zshrc_local
+  home/zsh/zshrc_local.sample: .zshrc_local
 
 vim:
   dir: '{{ home_path }}/vim'
