@@ -1,6 +1,6 @@
 ---
 name: feature-impact
-description: feature-start で作った proposal を元に、既存仕様（journey, requirements）との差分を分析する。影響を受ける既存要素と新規追加要素を delta.md に明示する。speckit に渡す前の差分実装の核となる文書。
+description: feature-start で作った proposal を元に、既存仕様（docs/current/journey.md, requirements.md）との差分を分析する。影響を受ける既存要素と新規追加要素を delta.md に明示する。speckit に渡す前の差分実装の核となる文書。機能追加 / 修正専用（feature 002+）。
 disable-model-invocation: true
 argument-hint: [feature-slug]
 ---
@@ -11,23 +11,25 @@ argument-hint: [feature-slug]
 
 ## ゴール
 
-`docs/product/features/NNN-<slug>/delta.md` を作る。これは「既存仕様 → 新仕様」の差分を構造化したもので、speckit の `/speckit.specify` への入力になる。
+`docs/features/NNN-<slug>/delta.md` を作る。これは「既存仕様 → 新仕様」の差分を構造化したもので、speckit の `/speckit.specify` への入力になる。
 
 ## プロセス
 
 ### 1. 対象機能の特定
 
-- `$ARGUMENTS` 指定があれば `docs/product/features/<arg>/` を対象
-- 無ければ `docs/product/features/*/` を `ls`、`proposal.md` があり `delta.md` が無い最新ディレクトリを WIP として自動選択。複数候補がある場合はユーザーに選ばせる
+- `$ARGUMENTS` 指定があれば `docs/features/<arg>/` を対象
+- 無ければ `docs/features/*/` を `ls`、`proposal.md` があり `delta.md` が無い最新ディレクトリを WIP として自動選択。複数候補がある場合はユーザーに選ばせる
 - 対象ディレクトリが決まらなければ「`/feature-start` を先に実行してください」で停止
 
 ### 2. 入力読み込み（必須すべて）
 
-- 対象機能の `proposal.md`
-- `docs/product/discovery.md`
-- `docs/product/journey.md`
-- `docs/product/requirements.md`
-- `docs/product/decisions/*.md`（あれば全て）
+- 対象 feature の `proposal.md`
+- `docs/current/concept.md`（あれば）
+- `docs/current/product-brief.md`（あれば）
+- `docs/current/journey.md`
+- `docs/current/requirements.md`
+- `docs/current/constitution.md`（あれば）
+- `docs/decisions/*.md`（あれば全て）
 
 ### 3. 差分マッピング
 
@@ -35,7 +37,7 @@ argument-hint: [feature-slug]
 `ADD`（新規）/ `MODIFY`（既存変更）/ `REMOVE`（既存削除）/ `UNAFFECTED`（明示的に影響なし）
 
 #### 3.1 Persona の差分
-journey.md の各ペルソナに対し、この機能で:
+`docs/current/journey.md` の各ペルソナに対し、この機能で:
 - 新ペルソナを追加するか
 - 既存ペルソナの記述（役割・Pain・Gain）を変えるか
 - 影響なしか
@@ -50,6 +52,7 @@ journey.md の各ペルソナに対し、この機能で:
 - 既存ステップで挙動が変わる箇所
 
 #### 3.4 Requirements の差分
+`docs/current/requirements.md` を基準に:
 - 新規 FR（この機能で追加される機能要求）
 - 既存 FR の更新（受け入れ基準が変わる、優先度が上がる等）
 - 削除 / 非推奨化される FR
@@ -59,13 +62,16 @@ journey.md の各ペルソナに対し、この機能で:
 - 新たに発生する制約
 - 既存の Out of Scope から取り出される項目
 
+#### 3.6 既存 ADR との整合性
+`docs/decisions/*.md` で確定した判断と矛盾していないか確認。矛盾するなら新しい ADR が必要になる旨を `Decision Points` に書く。
+
 ### 4. 既存への副作用チェック
 
 「この機能は既存のどの体験 / 要求と **競合** しうるか」を 3 つ以上挙げる。無理矢理でも探す。例: 既存の権限モデルとの矛盾、既存ペルソナの Pain を逆に増やすケース、既存 NFR を侵害するケース。
 
 ### 5. 出力
 
-`docs/product/features/NNN-<slug>/delta.md` を Write。
+`docs/features/NNN-<slug>/delta.md` を Write。
 
 ## 出力テンプレート
 
@@ -74,14 +80,14 @@ journey.md の各ペルソナに対し、この機能で:
 
 > 作成日: YYYY-MM-DD
 > Slug: NNN-<slug>
-> 入力: proposal.md, ../../discovery.md, ../../journey.md, ../../requirements.md
+> 入力: proposal.md, docs/current/journey.md, docs/current/requirements.md, docs/current/product-brief.md, docs/decisions/*.md
 > 既存仕様の参照時点: （ファイル更新日 or commit hash）
 
 ## 1. Persona Delta
 | ペルソナ | 変更タイプ | 内容 |
 |---------|-----------|------|
 | 田中さん（既存） | MODIFY | Pain に「招待リンクの管理が煩雑」を追加 |
-| 招待ゲスト | ADD | 新ペルソナとして追加（journey.md 更新が必要） |
+| 招待ゲスト | ADD | 新ペルソナとして追加（docs/current/journey.md 更新が必要） |
 
 ## 2. JTBD Delta
 | ID | 変更タイプ | 内容 |
@@ -120,21 +126,26 @@ journey.md の各ペルソナに対し、この機能で:
 - 新規制約: ...
 - Out of Scope から昇格: ...
 
-## 6. Conflicts & Side Effects（最低 3 つ）
+## 6. ADR Compatibility
+- 既存 ADR `<slug>.md` と矛盾するか: yes | no
+- 矛盾する場合の論点: ...
+
+## 7. Conflicts & Side Effects（最低 3 つ）
 1. **既存権限モデルとの競合**: ...
 2. **既存ペルソナへの副作用**: ...
 3. **NFR への副作用**: ...
 
-## 7. Decision Points（レビューで詰める論点）
+## 8. Decision Points（レビューで詰める論点）
 - ...
 
-## 8. Open Questions
+## 9. Open Questions
 - ...
 ```
 
 ## 終了条件
 
-- `delta.md` が書かれている
+- `docs/features/NNN-<slug>/delta.md` が書かれている
 - すべての差分項目に変更タイプ（ADD/MODIFY/REMOVE/UNAFFECTED）が付いている
 - Conflicts & Side Effects が 3 つ以上挙がっている
-- 次のステップ「`/product-review-cto`、`/product-review-designer`、`/product-review-pm` を順次実行」をユーザーに案内
+- 既存 ADR との整合性チェックが済んでいる
+- 次のステップ「`/product-review-cto <slug>`、`/product-review-designer <slug>`、`/product-review-pm <slug>` を順次実行」をユーザーに案内（必要なら先に `/product-business-model <slug>` を提案）

@@ -1,6 +1,6 @@
 ---
 name: product-pitch
-description: brief.md などのプロダクトドキュメントから、3 分ピッチ向けのマークダウン資料 pitch.md を生成する。Airbnb 型の 9 スライド構成（Title/Problem/Solution/Market/Traction/Unique Insight/Business Model/Team/Closing）。product-refine 完了後に実行。引数で機能スラグを指定可、無指定時は WIP を自動検出。
+description: docs/current/product-brief.md と feature の discovery / business-model から、3 分ピッチ向けマークダウン pitch.md を docs/features/<slug>/pitch.md に生成する。Airbnb 型の 9 セクション構成（Title/Problem/Solution/Market/Traction/Unique Insight/Business Model/Team/Closing）。product-refine 完了後に実行。引数で feature スラグを指定可、無指定時は WIP を自動検出。
 disable-model-invocation: true
 argument-hint: [feature-slug]
 ---
@@ -13,43 +13,31 @@ argument-hint: [feature-slug]
 
 ## ゴール
 
-`pitch.md` をマークダウンで生成する。
-
-- 初期立ち上げ mode: `docs/product/pitch.md`
-- Feature mode: `docs/product/features/NNN-<slug>/pitch.md`
-
-スライド化は不要。マークダウンのまま読める形で良い。
+`docs/features/<slug>/pitch.md` をマークダウンで生成する。スライド化は不要。マークダウンのまま読める形で良い。
 
 ## プロセス
 
 ### 1. 対象の特定
 
-- `$ARGUMENTS` 指定 → `docs/product/features/<arg>/` を対象（feature mode）
-- 無指定で features 配下に `brief.md` あり `pitch.md` 無しの WIP があれば候補として提示
-- それも無ければ `docs/product/` 直下を対象（初期立ち上げ mode）
+- `$ARGUMENTS` 指定 → `docs/features/<arg>/` を対象
+- 無指定で `docs/features/*/` 配下に refined な状態（`docs/current/product-brief.md` がこの feature を反映済み）かつ `pitch.md` 無しの WIP があれば候補として提示
+- 候補なしなら「先に `/product-refine <slug>` を実行してください」で停止
 
 ### 2. 入力読み込み
 
-`brief.md` が存在することを必須確認。無ければ「先に `/product-refine` を実行してください」で停止。
-
-**初期立ち上げ mode**:
-- `docs/product/brief.md`（必須）
-- `docs/product/discovery.md`, `docs/product/journey.md`, `docs/product/requirements.md`
-- `docs/product/CONSTITUTION.md`（あれば）
-
-**Feature mode**:
-- 対象 feature の `proposal.md`, `delta.md`, `brief.md`（必須）
-- 親 `discovery.md`, `journey.md`, `requirements.md`
-- `decisions/*.md`（あれば）
+- 必須: `docs/current/product-brief.md`（無ければ「先に `/product-refine` を実行してください」で停止）
+- 必須: 対象 feature の `discovery.md`、`business-model.md`
+- 任意: 対象 feature の `proposal.md`、`delta.md`、`reviews/*.md`
+- 任意: `docs/current/journey.md`、`docs/current/requirements.md`、`docs/current/concept.md`、`docs/current/constitution.md`、`docs/decisions/*.md`
 
 ### 3. 不足情報のヒアリング
 
-ピッチには brief.md に書かれていない情報が必要になることが多い。以下を Read 後に確認し、欠けていればユーザーに質問する（最大 5 問まで、まとめて聞く）:
+ピッチには brief.md / business-model.md に書かれていない情報が必要になることが多い。以下を Read 後に確認し、欠けていればユーザーに質問する（最大 5 問まで、まとめて聞く）:
 
-- **Market size**: TAM/SAM/SOM の数字、または参照可能な近接市場のサイズ
+- **Market size**: TAM/SAM/SOM の数字、または参照可能な近接市場のサイズ（business-model.md 優先）
 - **Traction**: ユーザー数 / 売上 / 待機リスト / インタビュー件数 / LOI など、現時点の引き合いを示す数字や事実
 - **Unique Insight**: 「この市場で他の人が見落としている真実」が discovery.md の "Why Now" に書かれているか確認、不足なら追加で聞く
-- **Business Model**: 収益化方法（Conditions Carried Forward や discovery には書かれていないことが多い）
+- **Business Model**: business-model.md に primary hypothesis があるか確認
 - **Team**: 創業者 / コアメンバーの背景（Why Us を補強する具体的な経歴・受賞・実績）
 
 トラクションが本当に何も無い場合は「early-stage / pre-launch」として正直に書く。捏造しない。
@@ -72,7 +60,7 @@ argument-hint: [feature-slug]
 - スクリーンショットがあるならファイルパスを参照、無ければ言葉で UI を描写
 
 #### 3. Market
-- 市場規模を数字で。TAM/SAM/SOM か近接市場のサイズ
+- 市場規模を数字で。business-model.md の TAM/SAM/SOM か近接市場のサイズ
 - 数字が無い場合は「成長率 / 利用頻度 / 隣接市場の取引量」など、市場の存在を示す代替指標を使う
 
 #### 4. Traction
@@ -85,7 +73,7 @@ argument-hint: [feature-slug]
 - discovery.md の Why Now / Why Us を再構成
 
 #### 6. Business Model
-- 収益化方法を一言で（例: 「取引額の 10%」「月額 $X / 席」「広告」）
+- 収益化方法を business-model.md の Primary Hypothesis から一言で（例: 「取引額の 10%」「月額 $X / 席」「広告」）
 - 単価 × 想定ユーザー数の概算があれば添える
 
 #### 7. Team（Why You）
@@ -98,7 +86,7 @@ argument-hint: [feature-slug]
 
 ### 5. 出力
 
-対象パスに `pitch.md` を Write。
+`docs/features/<slug>/pitch.md` を Write。
 
 ## 出力テンプレート
 
@@ -106,6 +94,7 @@ argument-hint: [feature-slug]
 # Pitch: <プロダクト名 / 機能名>
 
 > 作成日: YYYY-MM-DD
+> Slug: NNN-<slug>
 > 想定発表時間: 3 min
 > 対象聴衆: <投資家 | 経営層 | パイロット顧客 | 採用候補者 | その他>
 > 入力: （Read したファイル一覧）
@@ -215,9 +204,10 @@ argument-hint: [feature-slug]
 
 ## 終了条件
 
-- `pitch.md` が書かれている
+- `docs/features/<slug>/pitch.md` が書かれている
 - 各セクションに「勝負の 1 文」が太字で配置されている
 - Title が 6-10 語（日本語なら 20-30 字目安）
 - Traction セクションが空欄でない（数字が無い場合は pre-launch と明示し代替指標を入れる）
 - Closing に具体的な ask と 12 ヶ月のコミットがある
-- ユーザーに「ピッチ後の改訂は brief.md / discovery.md 側を更新してから再実行を推奨」と案内
+- ユーザーに「ピッチ後の改訂は product-brief.md / discovery.md 側を更新してから再実行を推奨」と案内
+- 次のステップ `/product-handoff <slug>` を案内

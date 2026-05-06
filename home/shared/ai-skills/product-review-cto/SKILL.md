@@ -1,6 +1,6 @@
 ---
 name: product-review-cto
-description: CTO 視点で技術的実現性・アーキテクチャリスク・build vs buy・運用コストをレビューする。初期立ち上げ時は requirements.md まで、機能追加時は delta.md までできた段階で実行。引数で機能スラグを指定可、無指定時は WIP を自動検出。
+description: CTO 視点で技術的実現性・アーキテクチャリスク・build vs buy・運用コストをレビューする。docs/features/<slug>/reviews/cto.md に出力。引数で feature スラグを指定可、無指定時は WIP を自動検出。
 disable-model-invocation: true
 argument-hint: [feature-slug]
 ---
@@ -11,26 +11,24 @@ argument-hint: [feature-slug]
 
 ## ゴール
 
-レビュー対象（初期立ち上げ全体 or 特定機能の delta）について、技術観点での評価・リスク・推奨を `reviews/cto.md` に書き出す。
+レビュー対象 feature について、技術観点での評価・リスク・推奨を `docs/features/<slug>/reviews/cto.md` に書き出す。
 
 ## プロセス
 
 ### 1. レビュー対象の特定
 
-- `$ARGUMENTS` 指定 → `docs/product/features/<arg>/` を対象（feature mode）
-- 無指定で `docs/product/features/*/` 配下に `delta.md` あり `reviews/cto.md` なしの WIP があれば、それを候補として提示し確認
-- それも無ければ `docs/product/` 直下を対象（初期立ち上げ mode）
+- `$ARGUMENTS` 指定 → `docs/features/<arg>/` を対象
+- 無指定で `docs/features/*/` 配下に `discovery.md`（または `delta.md`）あり、かつ `reviews/cto.md` 無しの WIP があれば候補として提示し確認
+- それも無ければ「先に `/product-discovery` または `/feature-impact` を実行してください」で停止
 
 ### 2. 入力読み込み
 
-**初期立ち上げ mode**:
-- `discovery.md`, `journey.md`, `requirements.md` を全 Read
-- 出力先: `docs/product/reviews/cto.md`
+- 対象 feature の `discovery.md`、`business-model.md`（あれば）、`proposal.md`（あれば）、`delta.md`（あれば）
+- `docs/current/journey.md`、`docs/current/requirements.md`、`docs/current/product-brief.md`、`docs/current/constitution.md`、`docs/current/concept.md`（存在するもの全て）
+- `docs/decisions/*.md`（あれば全て）
+- 過去 feature の `reviews/cto.md`（参考）
 
-**Feature mode**:
-- `proposal.md`, `delta.md` を Read
-- コンテキスト: 親 `discovery.md`, `journey.md`, `requirements.md`, `decisions/*.md`, 過去 features の `brief.md` も Read
-- 出力先: `docs/product/features/NNN-<slug>/reviews/cto.md`
+出力先: `docs/features/<slug>/reviews/cto.md`
 
 ### 3. 評価軸
 
@@ -60,15 +58,15 @@ argument-hint: [feature-slug]
 
 ### 6. 出力
 
-対象パスに `reviews/cto.md` を Write。
+`docs/features/<slug>/reviews/cto.md` を Write。
 
 ## 出力テンプレート
 
 ```markdown
-# CTO Review
+# CTO Review — <feature 名>
 
 > 作成日: YYYY-MM-DD
-> 対象: <初期立ち上げ全体 | feature NNN-slug>
+> Slug: NNN-<slug>
 > 入力: （Read したファイル一覧）
 
 ## Scores
@@ -109,7 +107,7 @@ argument-hint: [feature-slug]
 
 ## 終了条件
 
-- 対象の `reviews/cto.md` が書かれている
+- `docs/features/<slug>/reviews/cto.md` が書かれている
 - 全 7 軸にスコアと根拠がある
 - High / Medium のリスクには「次に決めるべきこと」が具体的に書かれている
 - 結論（GO/GO-WITH-CONDITIONS/NO-GO）が明示されている

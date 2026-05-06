@@ -30,7 +30,7 @@ Spec Kit の `plan.md` を、実装開始前の engineering gate としてレビ
 - 強く推奨: `research.md`, `data-model.md`, `database.md`, `quickstart.md`, `tasks.md`
 - Contract: `contracts/*.md`
 - Checklists: `checklists/*.md`
-- Product context: `docs/product/*.md`, `docs/product/decisions/*.md` など plan が参照しているもの
+- Product context: `docs/current/*.md`（特に `journey.md`、`requirements.md`、`product-brief.md`、`constitution.md`）、`docs/decisions/*.md`、`docs/features/<slug>/*.md` など plan が参照しているもの
 - 実装 repo: plan が隣接 repo や package を参照する場合、該当 `README.md`, manifest, test config, source layout を確認する
 
 ## Step 0: Scope Challenge

@@ -1,6 +1,6 @@
 ---
 name: product-review-pm
-description: シニア PM 視点でスコープの妥当性・優先度・MVP の切り出し・成功指標の設計をレビューする。初期立ち上げ時は requirements.md まで、機能追加時は delta.md までできた段階で実行。引数で機能スラグを指定可、無指定時は WIP を自動検出。
+description: シニア PM 視点でスコープの妥当性・優先度・MVP の切り出し・成功指標の設計をレビューする。docs/features/<slug>/reviews/pm.md に出力。引数で feature スラグを指定可、無指定時は WIP を自動検出。
 disable-model-invocation: true
 argument-hint: [feature-slug]
 ---
@@ -11,26 +11,24 @@ argument-hint: [feature-slug]
 
 ## ゴール
 
-レビュー対象（初期立ち上げ全体 or 特定機能の delta）について、スコープ・優先度・指標観点での評価・推奨を `reviews/pm.md` に書き出す。
+レビュー対象 feature について、スコープ・優先度・指標観点での評価・推奨を `docs/features/<slug>/reviews/pm.md` に書き出す。
 
 ## プロセス
 
 ### 1. レビュー対象の特定
 
-- `$ARGUMENTS` 指定 → `docs/product/features/<arg>/` を対象（feature mode）
-- 無指定で `docs/product/features/*/` 配下に `delta.md` あり `reviews/pm.md` なしの WIP があれば、それを候補として提示し確認
-- それも無ければ `docs/product/` 直下を対象（初期立ち上げ mode）
+- `$ARGUMENTS` 指定 → `docs/features/<arg>/` を対象
+- 無指定で `docs/features/*/` 配下に `discovery.md`（または `delta.md`）あり、かつ `reviews/pm.md` 無しの WIP があれば候補として提示し確認
+- それも無ければ「先に `/product-discovery` または `/feature-impact` を実行してください」で停止
 
 ### 2. 入力読み込み
 
-**初期立ち上げ mode**:
-- `discovery.md`, `journey.md`, `requirements.md` を全 Read
-- 出力先: `docs/product/reviews/pm.md`
+- 対象 feature の `discovery.md`、`business-model.md`（あれば）、`proposal.md`（あれば）、`delta.md`（あれば）
+- `docs/current/journey.md`、`docs/current/requirements.md`、`docs/current/product-brief.md`、`docs/current/concept.md`、`docs/current/constitution.md`（存在するもの全て）
+- `docs/decisions/*.md`（あれば全て）
+- 過去 feature の `reviews/pm.md` と shipped 状態（`docs/features/*/` を `ls`）
 
-**Feature mode**:
-- `proposal.md`, `delta.md` を Read
-- コンテキスト: 親 `discovery.md`, `journey.md`, `requirements.md`, 過去 features の `brief.md` も Read
-- 出力先: `docs/product/features/NNN-<slug>/reviews/pm.md`
+出力先: `docs/features/<slug>/reviews/pm.md`
 
 ### 3. 評価軸
 
@@ -42,11 +40,11 @@ argument-hint: [feature-slug]
 4. **Success metrics** — 成功を測れる指標が定義され、計測可能か
 5. **Risk of scope creep** — 周辺機能に膨らむ誘惑にどれだけ耐えているか
 6. **Customer evidence** — Discovery の前提を裏付ける証拠（ユーザーインタビュー、データ、競合動向）への参照があるか
-7. **Sequencing** — 初期立ち上げ全体 / 既存機能との順序が合理的か（feature 追加時は他の WIP / 完了 feature との兼ね合いも見る）
+7. **Sequencing** — feature 全体 / 既存機能との順序が合理的か（feature 追加時は他の WIP / 完了 feature との兼ね合いも見る）
 
 ### 4. スコープモード提案
 
-gstack の `/plan-ceo-review` 風に、4 モードのうち最も合うものを 1-2 つ提案する:
+4 モードのうち最も合うものを 1-2 つ提案する:
 
 - **SCOPE EXPANSION**: 現状の解は控え目すぎる。10 倍の野心版を提示
 - **SELECTIVE EXPANSION**: 部分的に拡張すべき領域を指摘
@@ -63,15 +61,15 @@ gstack の `/plan-ceo-review` 風に、4 モードのうち最も合うものを
 
 ### 6. 出力
 
-対象パスに `reviews/pm.md` を Write。
+`docs/features/<slug>/reviews/pm.md` を Write。
 
 ## 出力テンプレート
 
 ```markdown
-# PM Review
+# PM Review — <feature 名>
 
 > 作成日: YYYY-MM-DD
-> 対象: <初期立ち上げ全体 | feature NNN-slug>
+> Slug: NNN-<slug>
 > 入力: （Read したファイル一覧）
 
 ## Scores
@@ -110,9 +108,9 @@ gstack の `/plan-ceo-review` 風に、4 モードのうち最も合うものを
 
 ## 終了条件
 
-- 対象の `reviews/pm.md` が書かれている
+- `docs/features/<slug>/reviews/pm.md` が書かれている
 - 全 7 軸にスコアと根拠がある
 - Scope Mode が 1-2 つ推奨され、具体的な変更案が書かれている
 - MVP の FR リストとフェーズ 2 送りの FR リストが分けて書かれている
 - 結論（GO/GO-WITH-CONDITIONS/NO-GO）が明示されている
-- 3 レビューが揃ったら次のステップ `/product-refine` をユーザーに案内
+- 3 レビューが揃ったら次のステップ `/product-refine <slug>` をユーザーに案内
