@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spec Plan Eng Review"
+  short_description: "Spec Kit plan.mdを技術観点でレビュー"
+  default_prompt: "Use $spec-review-plan-eng to review the current Spec Kit plan.md from an engineering perspective."

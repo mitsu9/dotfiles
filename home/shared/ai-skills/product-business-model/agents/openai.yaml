@@ -1,0 +1,7 @@
+interface:
+  display_name: "Product Business Model"
+  short_description: "Monetization and market sizing for products"
+  default_prompt: "Use $product-business-model to turn product discovery and customer journey into monetization hypotheses, TAM/SAM/SOM, and a validation plan."
+
+policy:
+  allow_implicit_invocation: true
