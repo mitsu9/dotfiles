@@ -6,3 +6,15 @@ url = "https://mcp.notion.com/mcp"
 
 [mcp_servers.figma]
 url = "https://mcp.figma.com/mcp"
+
+[mcp_servers.linear]
+url = "https://mcp.linear.app/mcp"
+
+[plugins."google-calendar@openai-curated"]
+enabled = true
+
+[plugins."figma@openai-curated"]
+enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
