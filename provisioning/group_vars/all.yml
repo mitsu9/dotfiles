@@ -121,6 +121,8 @@ links:
     dest: .config/ghostty/config
   - src: home/codex/config.toml
     dest: .codex/config.toml
+  - src: home/codex/rules/default.rules
+    dest: .codex/rules/default.rules
   - src: home/claude/settings.json
     dest: .claude/settings.json
   - src: home/shared/ai-skills
