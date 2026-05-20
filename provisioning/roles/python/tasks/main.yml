@@ -5,4 +5,4 @@
   command: uv tool install {{ item }}
   with_items:
     - '{{ uv.packages }}'
-  when: uv.packages
+  when: (uv.packages | default([]) | length) > 0

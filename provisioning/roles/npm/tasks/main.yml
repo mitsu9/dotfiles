@@ -2,4 +2,4 @@
   command: npm install -g {{ item }}
   with_items:
     - '{{ npm.packages }}'
-  when: npm.packages
+  when: (npm.packages | default([]) | length) > 0

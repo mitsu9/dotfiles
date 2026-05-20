@@ -2,4 +2,4 @@
   command: go install {{ item }}
   with_items:
     - '{{ go.packages }}'
-  when: go.packages
+  when: (go.packages | default([]) | length) > 0

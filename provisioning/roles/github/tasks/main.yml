@@ -2,4 +2,4 @@
   command: ghq get {{ item }}
   with_items:
     - '{{ github.repositories }}'
-  when: github.repositories
+  when: (github.repositories | default([]) | length) > 0
