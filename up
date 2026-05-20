@@ -8,7 +8,7 @@ install_homebrew() {
   command -v 'brew' > /dev/null 2>&1 && return
 
   echo 'Install homebrew'
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" < /dev/null
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ARCH=$(uname -m)
   if [[ $ARCH == arm64 ]]; then
       echo "Current Architecture: $ARCH"
