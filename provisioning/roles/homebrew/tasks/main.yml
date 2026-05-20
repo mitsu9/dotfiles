@@ -7,6 +7,7 @@
     name:  "{{ homebrew.applications }}"
     state: present
     accept_external_apps: yes
+    sudo_password: "{{ ansible_become_pass | default(omit) }}"
   when: (homebrew.applications | default([]) | length) > 0
 
 - name: tap repositories
