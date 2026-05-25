@@ -73,6 +73,7 @@ github:
   repositories:
     - git@github.com:mitsu9/Home.git
     - git@github.com:mitsu9/homelab.git
+    - git@github.com:mitsu9/Lyceum.git
 
 go:
   packages:
