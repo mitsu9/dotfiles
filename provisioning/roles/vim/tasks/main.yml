@@ -4,9 +4,15 @@
     dest: '{{ vim.dir }}'
 
 - name: make vim
-  shell: make && sudo make install
+  command: make
   args:
-    chdir: '{{ vim.dir | quote }}/src/'
+    chdir: '{{ vim.dir }}/src/'
+
+- name: install vim
+  become: yes
+  command: make install
+  args:
+    chdir: '{{ vim.dir }}/src/'
 
 - name: create .vim/autoload dir
   file:
