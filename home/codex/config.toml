@@ -10,6 +10,9 @@ url = "https://mcp.figma.com/mcp"
 [mcp_servers.linear]
 url = "https://mcp.linear.app/mcp"
 
+[mcp_servers.rememberthemilk]
+url = "https://www.rememberthemilk.com/mcp"
+
 [plugins."google-calendar@openai-curated"]
 enabled = true
 
