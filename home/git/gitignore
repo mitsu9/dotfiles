@@ -1,2 +1,4 @@
 .zshrc_local
 .envrc
+
+**/.claude/settings.local.json
