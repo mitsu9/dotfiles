@@ -167,3 +167,5 @@ vscode:
     - esbenp.prettier-vscode
     # perl
     - kraih.mojolicious
+    # ts
+    - astro-build.astro-vscode
