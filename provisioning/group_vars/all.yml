@@ -19,7 +19,9 @@ homebrew:
     - notion
     - obsidian
     - ovice
+    - paseo
     - slack
+    - stablyai/orca/orca
     - typora
     - visual-studio-code
     - workflowy
