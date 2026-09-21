@@ -209,3 +209,10 @@ function set-aws-sts-session-token {
 ###################
 # githubにあげたくない設定を読み込む
 source ~/.zshrc_local
+
+# bun completions
+[ -s "/Users/mitsunobu.homma/.bun/_bun" ] && source "/Users/mitsunobu.homma/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
