@@ -1,0 +1,8 @@
+#!/bin/sh
+# Launch Claude Code under the private account profile.
+# Keep the path literal below in sync with use_claude_profile in
+# ~/.config/direnv/direnvrc: the macOS Keychain entry that holds the OAuth
+# credentials is keyed on a hash of this exact string.
+CLAUDE_CONFIG_DIR="$HOME/.config/claude/profiles/private"
+export CLAUDE_CONFIG_DIR
+exec "$HOME/.local/bin/claude" "$@"

@@ -132,6 +132,10 @@ links:
     dest: .claude/skills
   - src: home/shared/ai-skills
     dest: .codex/skills
+  - src: home/claude/bin/claude-private
+    dest: .local/bin/claude-private
+  - src: home/claude/settings.json
+    dest: .config/claude/profiles/private/settings.json
 
 copy:
   home/zsh/zshrc_local.sample: .zshrc_local
