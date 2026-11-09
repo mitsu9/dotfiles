@@ -41,6 +41,7 @@ homebrew:
     - git
     - go
     - gpg
+    - herdr
     - hub
     - java
     - jq
