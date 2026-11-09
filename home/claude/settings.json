@@ -34,5 +34,10 @@
         "repo": "anthropics/skills"
       }
     }
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.config/herdr/claude-usage.sh"
+  },
+  "theme": "dark"
 }
