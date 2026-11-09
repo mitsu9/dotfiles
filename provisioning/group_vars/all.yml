@@ -123,6 +123,12 @@ links:
     dest: .config/alacritty/alacritty.toml
   - src: home/ghostty/config
     dest: .config/ghostty/config
+  - src: home/herdr/config.toml
+    dest: .config/herdr/config.toml
+  - src: home/herdr/status.sh
+    dest: .config/herdr/status.sh
+  - src: home/herdr/claude-usage.sh
+    dest: .config/herdr/claude-usage.sh
   - src: home/codex/config.toml
     dest: .codex/config.toml
   - src: home/codex/rules/default.rules
