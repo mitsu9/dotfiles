@@ -1,9 +1,9 @@
 homebrew:
   applications:
-    - alacritty
+#    - alacritty
     - alfred
     - android-studio
-    - background-music
+#    - background-music
     - claude
     - clipy
     - cmux
