@@ -25,3 +25,4 @@
     - role: python
     - role: github
     - role: alacritty
+    - role: ai
