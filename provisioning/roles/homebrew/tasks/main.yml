@@ -6,7 +6,7 @@
   community.general.homebrew_cask:
     name:  "{{ homebrew.applications }}"
     state: present
-    accept_external_apps: yes
+    accept_external_apps: true
     sudo_password: "{{ ansible_become_pass | default(omit) }}"
   when: (homebrew.applications | default([]) | length) > 0
 
